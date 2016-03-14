@@ -1,289 +1,266 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <Spinner
+        android:id="@+id/spinnerSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:entries="@array/songs" />
+
     <TextView
-        android:id="@+id/tv"
+        android:id="@+id/textHint"
         android:layout_width="fill_parent"
         android:layout_height="77dp"
-        android:background="#98FB98"
-         />
+        android:layout_below="@id/spinnerSong"
+        android:background="#98FB98" />
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="215dp"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textHint"
         android:background="#C6E2FF"
         android:orientation="vertical" >
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:id="@+id/layoutLineOne"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
             android:layout_marginTop="1dp"
             android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="25dp"
-                android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/btnQ"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="Q" />
+                android:text="Q"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnW"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="W" />
+                android:text="W"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnE"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="E" />
+                android:text="E"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnR"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="R" />
+                android:text="R"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnT"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="T" />
+                android:text="T"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnY"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="Y" />
+                android:text="Y"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnU"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="U" />
+                android:text="U"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnI"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="I" />
+                android:text="I"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnO"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="O" />
+                android:text="O"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnP"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
                 android:text="P"
-                android:textColor="#EE0000" />
+                android:textSize="@dimen/keyboard_text_size" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:id="@+id/layoutLineTwo"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/layoutLineOne"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="1dp"
             android:orientation="horizontal" >
 
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" />
-
             <Button
                 android:id="@+id/btnA"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="A" />
+                android:text="A"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnS"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="S" />
+                android:text="S"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnD"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="D" />
+                android:text="D"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnF"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="F" />
+                android:text="F"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnG"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="G" />
+                android:text="G"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnH"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="H" />
+                android:text="H"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnJ"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="J" />
+                android:text="J"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnK"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="K" />
+                android:text="K"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnL"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
                 android:text="L" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/layoutLineTwo"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="1dp"
             android:orientation="horizontal" >
 
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content" />
-
             <Button
                 android:id="@+id/btnZ"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="Z" />
+                android:text="Z"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnX"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="X" />
+                android:text="X"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnC"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="C" />
+                android:text="C"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnV"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="V" />
+                android:text="V"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnB"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="B" />
+                android:text="B"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnN"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="N" />
+                android:text="N"
+                android:textSize="@dimen/keyboard_text_size" />
 
             <Button
                 android:id="@+id/btnM"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/keyboard_length"
+                android:layout_height="@dimen/keyboard_length"
                 android:background="@drawable/buttonstyle"
-                android:text="M" />
+                android:text="M"
+                android:textSize="@dimen/keyboard_text_size" />
         </LinearLayout>
+    </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_weight="0.49" >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true" >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="请选择歌曲" />
-
-                <Spinner
-                    android:id="@+id/song"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/songs" />
-
-            </LinearLayout>
-
-        </RelativeLayout>
-    </LinearLayout>
-    
-</LinearLayout>
+</RelativeLayout>

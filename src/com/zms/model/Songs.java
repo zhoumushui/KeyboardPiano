@@ -1,4 +1,4 @@
-package com.my.entity;
+package com.zms.model;
 
 import java.io.Serializable;
 
