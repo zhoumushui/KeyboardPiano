@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">钢琴</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    
+    <string name="s1">月亮代表我的心</string>
+    <string name="s0">LOQSONQS STUVTS QPOOO QPOOO PQPOMPQP LOQSONQS STUVTS QPOOO QPOOO PQPMNOPO QSQPOSN MNMNMLQ SQPOSN MNOOOPQP LOQSONQS STUVTS QPOOO QPOOO PQPMNOPO</string>
+    
+    
+    <string-array name="songs">
+        <item name= "s1">月亮代表我的心</item>
+        <item>北京欢迎你</item>
+        <item>月亮代表我的心</item>
+        <item>生日快乐</item>
+    </string-array>
+</resources>
