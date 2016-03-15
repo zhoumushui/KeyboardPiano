@@ -148,33 +148,17 @@ public class MainActivity extends Activity {
 		soundPool = new SoundPool(7, AudioManager.STREAM_MUSIC, 30); // 实例化后台播放池
 
 		// 将所有的OGG音调文件加载到soundPool中,并将加载的顺序与soundMap的KEY对应
-		mapSound.put(0, soundPool.load(MainActivity.this, R.raw.sound01, 1));
-		mapSound.put(1, soundPool.load(MainActivity.this, R.raw.sound02, 1));
-		mapSound.put(2, soundPool.load(MainActivity.this, R.raw.sound03, 1));
-		mapSound.put(3, soundPool.load(MainActivity.this, R.raw.sound04, 1));
-		mapSound.put(4, soundPool.load(MainActivity.this, R.raw.sound05, 1));
-		mapSound.put(5, soundPool.load(MainActivity.this, R.raw.sound06, 1));
-		mapSound.put(6, soundPool.load(MainActivity.this, R.raw.sound07, 1));
-		mapSound.put(7, soundPool.load(MainActivity.this, R.raw.sound08, 1));
-		mapSound.put(8, soundPool.load(MainActivity.this, R.raw.sound09, 1));
-		mapSound.put(9, soundPool.load(MainActivity.this, R.raw.sound10, 1));
-		mapSound.put(10, soundPool.load(MainActivity.this, R.raw.sound11, 1));
-		mapSound.put(11, soundPool.load(MainActivity.this, R.raw.sound12, 1));
-		mapSound.put(12, soundPool.load(MainActivity.this, R.raw.sound13, 1));
-		mapSound.put(13, soundPool.load(MainActivity.this, R.raw.sound14, 1));
-		mapSound.put(14, soundPool.load(MainActivity.this, R.raw.sound15, 1));
-		mapSound.put(15, soundPool.load(MainActivity.this, R.raw.sound16, 1));
-		mapSound.put(16, soundPool.load(MainActivity.this, R.raw.sound17, 1));
-		mapSound.put(17, soundPool.load(MainActivity.this, R.raw.sound18, 1));
-		mapSound.put(18, soundPool.load(MainActivity.this, R.raw.sound19, 1));
-		mapSound.put(19, soundPool.load(MainActivity.this, R.raw.sound20, 1));
-		mapSound.put(20, soundPool.load(MainActivity.this, R.raw.sound21, 1));
-		mapSound.put(21, soundPool.load(MainActivity.this, R.raw.sound22, 1));
-		mapSound.put(22, soundPool.load(MainActivity.this, R.raw.sound23, 1));
-		mapSound.put(23, soundPool.load(MainActivity.this, R.raw.sound24, 1));
-		mapSound.put(24, soundPool.load(MainActivity.this, R.raw.sound25, 1));
-		mapSound.put(25, soundPool.load(MainActivity.this, R.raw.sound26, 1));
-		mapSound.put(26, soundPool.load(MainActivity.this, R.raw.sound27, 1));
+		for (int i = 0; i < 27; i++) {
+			int resId;
+			if (i < 9) {
+				resId = getResources().getIdentifier("sound0" + (i + 1), "raw",
+						getPackageName());
+			} else {
+				resId = getResources().getIdentifier("sound" + (i + 1), "raw",
+						getPackageName());
+			}
+			mapSound.put(i, soundPool.load(MainActivity.this, resId, 1));
+		}
 
 	}
 
@@ -183,8 +167,6 @@ public class MainActivity extends Activity {
 		public void onClick(View v) {
 			Button btn = (Button) v;
 			String str1;
-			int start = 0, end = 1;
-
 			Toast.makeText(MainActivity.this, btn.getText(), Toast.LENGTH_SHORT)
 					.show();
 			btn.setTextColor(Color.RED);
@@ -194,7 +176,7 @@ public class MainActivity extends Activity {
 			btn.setTextColor(Color.BLACK);
 
 			str1 = textHint.getText().toString();
-			if (str1.startsWith(" ")) {
+			if (str1.startsWith(" ")) { // 间隔
 				str1 = str1.substring(1);
 			}
 			// SpannableStringBuilder style = new SpannableStringBuilder(str1);
@@ -208,7 +190,6 @@ public class MainActivity extends Activity {
 					Toast.makeText(MainActivity.this, "恭喜你完成此歌曲，请重新选择", 2000)
 							.show();
 				}
-				System.out.println(str1);
 			}
 
 		}
