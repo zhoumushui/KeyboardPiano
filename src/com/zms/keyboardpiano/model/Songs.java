@@ -1,4 +1,4 @@
-package com.zms.model;
+package com.zms.keyboardpiano.model;
 
 import java.io.Serializable;
 
